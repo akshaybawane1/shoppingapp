@@ -44,7 +44,7 @@ const Cart = () => {
                     </li>
                   )
                 })}
-                <li className="list-group-item">Total Amount: {sum}</li>
+                <li className="list-group-item">Total Amount: {sum.toFixed(2)} $</li>
               </>
             )}
 
