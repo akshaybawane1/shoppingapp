@@ -318,5 +318,8 @@ h4{
                 width: 80vw;
                 height: 90vh;
         }
+        .errMsg{
+                top:30%;
+        }
 
 }
