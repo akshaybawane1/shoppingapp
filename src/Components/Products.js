@@ -160,9 +160,22 @@ const Products = () => {
                   onClick={() => {
                     handleAnimation()
                     AddToCart(item.id)
+                    const ThrottleAnim = () => {
+                      // console.log("Throttle Triggered")
+
+                      return function () {
+                        document.getElementById(item.id.toString()).classList.add("cart")
+                        setTimeout(() => {
+                          document.getElementById(item.id.toString()).classList.remove("cart")
+                        }, 1000)
+                      }
+                    }
+
+                    const func = ThrottleAnim()
+                    func()
                   }}
                 >
-                  <AddShoppingCartOutlinedIcon />
+                  <AddShoppingCartOutlinedIcon id={item.id.toString()} />
                 </button>
               </div>
             </div>
